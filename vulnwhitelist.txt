@@ -1,0 +1,15 @@
+vendor/
+node_modules/
+tests/
+locale/
+Proxies/
+siatestprogram/
+.git/
+*.min.js
+*.css
+*.scss
+*.crb
+_inc\/formtoken\.html\.twig
+*.services.yml
+**/api.yml
+**/xml_list_config/
