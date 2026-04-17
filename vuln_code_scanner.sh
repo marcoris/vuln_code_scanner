@@ -74,7 +74,11 @@ rg -ni --no-heading --color=never \
    "${EXCLUDE_ARGS[@]}" \
    > "$OUTPUT_FILE" || true
 
-ROWCOUNT=$(wc -l < "$OUTPUT_FILE")
+if [[ -f "$OUTPUT_FILE" ]]; then
+    ROWCOUNT=$(wc -l < "$OUTPUT_FILE")
+else
+    ROWCOUNT=0
+fi
 
 echo -e "${GREEN}[+] Scan completed.${NC} Results: ${YELLOW}$ROWCOUNT${NC}"
 
