@@ -72,7 +72,7 @@ echo -e "${BLUE}[*] Starting scan on:${NC} $TARGET"
 rg -ni --no-heading --color=never \
    -f "$PATTERN_FILE" "$TARGET" \
    "${EXCLUDE_ARGS[@]}" \
-   > "$OUTPUT_FILE"
+   > "$OUTPUT_FILE" || true
 
 ROWCOUNT=$(wc -l < "$OUTPUT_FILE")
 
